@@ -1,0 +1,21 @@
+{
+  "name": "starwarscli",
+  "version": "1.0.0",
+  "description": "A CLI to interact with the Star Wars API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "star",
+    "wars",
+    "api"
+  ],
+  "author": "\u0016Brian, Oz, Angelo, Juan, Julio",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^5.1.0",
+    "starwarsapi": "file:../starwarsapi",
+    "yargs": "^11.0.0"
+  }
+}
