@@ -1,4 +1,5 @@
 Schemas
+[films|people|planets|species|starships|vehicles]
 -----------------------------------
 Films
 -----------------------------------
@@ -24,5 +25,130 @@ Luke Skywalker\r\nhas established a new secret\r\nbase on the remote ice world\r
   category: 'films' }
 
 -----------------------------------
-Films
+People
 -----------------------------------
+
+{ count: 1,
+  next: null,
+  previous: null,
+  results:
+   [ { name: 'Luke Skywalker',
+       height: '172',
+       mass: '77',
+       hair_color: 'blond',
+       skin_color: 'fair',
+       eye_color: 'blue',
+       birth_year: '19BBY',
+       gender: 'male',
+       homeworld: 'https://swapi.co/api/planets/1/',
+       films: [Array],
+       species: [Array],
+       vehicles: [Array],
+       starships: [Array],
+       created: '2014-12-09T13:50:51.644000Z',
+       edited: '2014-12-20T21:17:56.891000Z',
+       url: 'https://swapi.co/api/people/1/' } ],
+  category: 'people' }
+
+-----------------------------------
+Planets
+-----------------------------------
+
+{ count: 1,
+  next: null,
+  previous: null,
+  results:
+   [ { name: 'Hoth',
+       rotation_period: '23',
+       orbital_period: '549',
+       diameter: '7200',
+       climate: 'frozen',
+       gravity: '1.1 standard',
+       terrain: 'tundra, ice caves, mountain ranges',
+       surface_water: '100',
+       population: 'unknown',
+       residents: [],
+       films: [Array],
+       created: '2014-12-10T11:39:13.934000Z',
+       edited: '2014-12-20T20:58:18.423000Z',
+       url: 'https://swapi.co/api/planets/4/' } ],
+  category: 'planets' }
+
+-----------------------------------
+Species
+-----------------------------------
+
+{ count: 1,
+  next: null,
+  previous: null,
+  results:
+   [ { name: 'Ewok',
+       classification: 'mammal',
+       designation: 'sentient',
+       average_height: '100',
+       skin_colors: 'brown',
+       hair_colors: 'white, brown, black',
+       eye_colors: 'orange, brown',
+       average_lifespan: 'unknown',
+       homeworld: 'https://swapi.co/api/planets/7/',
+       language: 'Ewokese',
+       people: [Array],
+       films: [Array],
+       created: '2014-12-18T11:22:00.285000Z',
+       edited: '2014-12-20T21:36:42.155000Z',
+       url: 'https://swapi.co/api/species/9/' } ],
+  category: 'species' }
+
+-----------------------------------
+Starships
+-----------------------------------
+
+{ count: 1,
+  next: null,
+  previous: null,
+  results:
+   [ { name: 'Death Star',
+       model: 'DS-1 Orbital Battle Station',
+       manufacturer: 'Imperial Department of Military Research, Sienar Fleet Systems',
+       cost_in_credits: '1000000000000',
+       length: '120000',
+       max_atmosphering_speed: 'n/a',
+       crew: '342953',
+       passengers: '843342',
+       cargo_capacity: '1000000000000',
+       consumables: '3 years',
+       hyperdrive_rating: '4.0',
+       MGLT: '10',
+       starship_class: 'Deep Space Mobile Battlestation',
+       pilots: [],
+       films: [Array],
+       created: '2014-12-10T16:36:50.509000Z',
+       edited: '2014-12-22T17:35:44.452589Z',
+       url: 'https://swapi.co/api/starships/9/' } ],
+  category: 'starships' }
+
+-----------------------------------
+Vehicles
+-----------------------------------
+
+{ count: 4,
+  next: null,
+  previous: null,
+  results:
+   [ { name: 'Imperial Speeder Bike',
+       model: '74-Z speeder bike',
+       manufacturer: 'Aratech Repulsor Company',
+       cost_in_credits: '8000',
+       length: '3',
+       max_atmosphering_speed: '360',
+       crew: '1',
+       passengers: '1',
+       cargo_capacity: '4',
+       consumables: '1 day',
+       vehicle_class: 'speeder',
+       pilots: [Array],
+       films: [Array],
+       created: '2014-12-18T11:20:04.625000Z',
+       edited: '2014-12-22T18:21:15.920537Z',
+       url: 'https://swapi.co/api/vehicles/30/' } ],
+  category: 'vehicles' }

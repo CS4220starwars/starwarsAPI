@@ -9,12 +9,13 @@ const search = (category, query) => { //
             results.results.forEach((item) => {
                 nameArray.push(item.name)
             })
-            results["category"]=category;
+            results["category"] = category;
+
             if (nameArray.length > 1) {
                 promptUser(results, nameArray)
             }
             else {
-                console.log(results)
+                prettyPrint(results)
             }
         }).catch(err => console.log(err))
 }
@@ -22,7 +23,7 @@ const search = (category, query) => { //
 const getbyid = (category, id) => {
     starwars.getbyid(category, id)
         .then((results) => {
-            console.log(results)
+            prettyPrint(results)
         }).catch(err => console.log(err))
 }
 
@@ -39,14 +40,39 @@ const promptUser = (results, nameArray) => {
             }
         }
     }]).then((selected) => {
-       results.results =results.results.filter((item)=>{
-           return selected.selections.includes(item.name)
-       })
-       console.log(results)
+        results.results = results.results.filter((item) => {
+            return selected.selections.includes(item.name)
+        })
+        prettyPrint(results)
     })
 }
 
 const prettyPrint = (object) => {
+    //[films|people|planets|species|starships|vehicles]
+    // for (results in results) print each object
+    switch (object["category"]) {  // TODO Formatting
+        // case "films":
+
+        //     break;
+        // case "people":
+
+        //     break;
+        // case "planets":
+
+        //     break;
+        // case "species":
+
+        //     break;
+        // case "starships":
+
+        //     break;
+        // case "vehicles":
+
+        //     break;
+        default:
+            console.log(object);
+            break;
+    }
 
 }
 
