@@ -66,9 +66,24 @@ const prettyPrint = (object) => {
         // case "starships":
 
         //     break;
-        // case "vehicles":
-
-        //     break;
+        case "vehicles":
+        console.log("-----------------------------------------------------------------")
+            object.results.forEach((item) => {
+                console.log(
+                `
+                >>> ${item.name} <<<
+                Model: ${item.model}
+                Class: ${item.vehicle_class}
+                Manufacturer: ${item.manufacturer}
+                Length: ${item.length} feet
+                Cost: ${item.cost_in_credits} credits
+                Length: ${item.max_atmosphering_speed} 360 km/h 
+                Passengers: ${item.crew}
+                `
+                )
+            })
+            console.log("-----------------------------------------------------------------")
+            break;
         default:
             console.log(object);
             break;
