@@ -50,6 +50,7 @@ const promptUser = (results, nameArray) => {
 const prettyPrint = (object) => {
     //[films|people|planets|species|starships|vehicles]
     // for (results in results) print each object
+    console.log("-----------------------------------------------------------------")
     switch (object["category"]) {  // TODO Formatting
         // case "films":
 
@@ -67,7 +68,6 @@ const prettyPrint = (object) => {
 
         //     break;
         case "vehicles":
-        console.log("-----------------------------------------------------------------")
             object.results.forEach((item) => {
                 console.log(
                 `
@@ -82,11 +82,11 @@ const prettyPrint = (object) => {
                 `
                 )
             })
-            console.log("-----------------------------------------------------------------")
             break;
         default:
             console.log(object);
             break;
+            console.log("-----------------------------------------------------------------")
     }
 
 }
