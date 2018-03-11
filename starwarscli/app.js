@@ -62,12 +62,31 @@ const prettyPrint = (object) => {
         //     break;
         // case "species":
 
-        //     break;
-        // case "starships":
-
-        //     break;
+             //break;
+         case "starships":
+        console.log("--------------------STARSHIP--------------------")
+            
+            object.results.forEach((item) => {
+                console.log(
+                `
+                >>> ${item.name} <<<
+                Model: ${item.model}
+                Class: ${item.starship_class}
+                Manufacturer: ${item.manufacturer}
+                Length: ${item.length} feet
+                Cost: ${item.cost_in_credits} credits 
+                Passengers: ${item.passengers}
+                Crew: ${item.crew}
+                Cargo: ${item.cargo_capacity}
+                Max atmospheric Pressure: ${item.max_atmosphering_speed} km/h
+                `
+                )
+            })
+                 console.log("------------------------------------------------")
+             break;
         case "vehicles":
-        console.log("-----------------------------------------------------------------")
+        console.log("--------------------VEHICLE--------------------")
+            
             object.results.forEach((item) => {
                 console.log(
                 `
@@ -77,12 +96,12 @@ const prettyPrint = (object) => {
                 Manufacturer: ${item.manufacturer}
                 Length: ${item.length} feet
                 Cost: ${item.cost_in_credits} credits
-                Length: ${item.max_atmosphering_speed} 360 km/h 
+                Length: ${item.max_atmosphering_speed} km/h 
                 Passengers: ${item.crew}
                 `
                 )
             })
-            console.log("-----------------------------------------------------------------")
+             console.log("-----------------------------------------------")
             break;
         default:
             console.log(object);
