@@ -103,9 +103,28 @@ const prettyPrint = (object) => {
         // case "planets":
 
         //     break;
-        // case "species":
-
-             //break;
+         case "species":
+         console.log("-----------------------------Species------------------------------")
+         object.results.forEach((item) => {
+             console.log(
+             ` >>> ${item.name} <<<
+                 Average Height: ${item.average_height}
+                 Average Lifespan: ${item.average_lifespan}
+                 Classification: ${item.classification} 
+                 Designation: ${item.designation}       
+                 Eye Colors: ${item.eye_colors}
+                 Hair Colors: ${item.hair_colors}
+                 Skin Colors: ${item.skin_colors}  
+                 Homeworld: ${item.homeworld}
+                 Language: ${item.language}  
+                 People: ${item.people}  
+                 Films: ${item.films}                          
+                 URL: ${item.url}
+                 Created: ${item.created}
+                 Edited: ${item.edited}
+             ` 
+             )
+         })
         case "starships":
         console.log("--------------------STARSHIP--------------------")
             
