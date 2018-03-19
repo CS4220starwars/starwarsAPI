@@ -21,9 +21,13 @@ const search = (category, query) => { //
 }
 
 const getbyid = (category, id) => {
+    const newObj={}
+    newObj["results"]=[]
     starwars.getbyid(category, id)
         .then((results) => {
-            prettyPrint(results)
+            newObj["results"].push(results)
+            newObj["category"] = category
+            prettyPrint(newObj)
         }).catch(err => console.log(err))
 }
 

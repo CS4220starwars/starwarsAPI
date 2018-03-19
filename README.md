@@ -23,5 +23,7 @@ node cli.js search --category starships --query death
 node cli.js search --category vehicles --query speeder
 
 
+node cli.js getbyid --category vehicles --id 6
+node cli.js getbyid --category people --id 2
 
 ```
