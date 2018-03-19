@@ -2,12 +2,16 @@ const
     starwars = require('starwarsapi'),
     inquirer = require('inquirer')
 
+
 const search = (category, query) => { // 
     const nameArray = []
     starwars.search(category, query)
         .then((results) => {
             results.results.forEach((item) => {
-                nameArray.push(item.name)
+                if (category == "films")
+                    nameArray.push(item.title)
+                else
+                    nameArray.push(item.name)
             })
             results["category"] = category;
 
@@ -21,8 +25,8 @@ const search = (category, query) => { //
 }
 
 const getbyid = (category, id) => {
-    const newObj={}
-    newObj["results"]=[]
+    const newObj = {}
+    newObj["results"] = []
     starwars.getbyid(category, id)
         .then((results) => {
             newObj["results"].push(results)
@@ -44,9 +48,16 @@ const promptUser = (results, nameArray) => {
             }
         }
     }]).then((selected) => {
-        results.results = results.results.filter((item) => {
-            return selected.selections.includes(item.name)
-        })
+        if (results["category"] == "films") {
+            results.results = results.results.filter((item) => {
+                return selected.selections.includes(item.title)
+            })
+        }
+        else {
+            results.results = results.results.filter((item) => {
+                return selected.selections.includes(item.name)
+            })
+        }
         prettyPrint(results)
     })
 }
@@ -66,7 +77,6 @@ const prettyPrint = (object) => {
                 Director: ${item.director}
                 Producer: ${item.producer}
                 Release Date: ${item.release_date}
-                URL: ${item.URL}
                 Created: ${item.created}
                 Edited: ${item.edited}
             `

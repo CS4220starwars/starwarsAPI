@@ -17,6 +17,7 @@ node cli.js getbyid --category <films|people|planets|species|starships|vehicles>
 #Test Cases
 ```
 node cli.js search --category films --query phantom
+node cli.js search --category films --query the
 node cli.js search --category people --query skywalker
 node cli.js search --category species --query a
 node cli.js search --category starships --query death
