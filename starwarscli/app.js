@@ -12,11 +12,9 @@ const search = (category, query) => { //
             results["category"] = category;
 
             if (nameArray.length > 1) {
-                console.log('found something')
                 promptUser(results, nameArray)
             }
             else {
-                console.log('found nothing')
                 prettyPrint(results)
             }
         }).catch(err => console.log(err))

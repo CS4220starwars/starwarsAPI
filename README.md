@@ -12,3 +12,16 @@ or
 ```
 node cli.js getbyid --category <films|people|planets|species|starships|vehicles> --id <id>
 ```
+
+
+#Test Cases
+```
+node cli.js search --category films --query phantom
+node cli.js search --category people --query skywalker
+node cli.js search --category species --query a
+node cli.js search --category starships --query death
+node cli.js search --category vehicles --query speeder
+
+
+
+```
