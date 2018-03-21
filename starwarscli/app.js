@@ -114,6 +114,25 @@ const prettyPrint = (object) => {
         // case "planets":
         //TODO
         //     break;
+        case "planets": //PLANETS
+            object.results.forEach((item) => {
+                console.log(
+                `
+                    >>> ${item.name} <<< 
+                    Diameter: ${item.diameter}
+                    Rotation period: ${item.rotation_period}
+                    Orbital period: ${item.orbital_period}
+                    Gravity: ${item.gravity}
+                    Population: ${item.population}
+                    Climate: ${item.climate}
+                    Terrain: ${item.terrain}
+                    Surface water: ${item.surface_water}
+                    Residents: ${item.residents}
+                    Films: ${item.films}
+                    URL: ${item.url}
+                `)
+            })
+            break;
         case "species":   //SPECIES -----------------------------------
             object.results.forEach((item) => {
                 console.log(
@@ -155,7 +174,7 @@ const prettyPrint = (object) => {
                 )
             })
             break;
-        case "vehicles":
+        case "vehicles": // VEHICLES 
             object.results.forEach((item) => {
                 console.log(
                     `
